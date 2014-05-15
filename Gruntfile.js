@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['js/**/*.js'],
+        src: ['js/prod/**/*.js'],
         dest: 'js/main.min.js'
       },
 
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'js/main.min.js': ['js/**/*.js']
+          'js/main.min.js': ['js/prod/**/*.js']
         }
       }
     },
@@ -40,8 +40,8 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
       
       javascripts: {
-        files: ['js/**/*.js'],
-        tasks: ['uglify', 'concat']
+        files: ['js/prod/**/*.js'],
+        tasks: ['concat', 'uglify']
       },
       
       sass: {
